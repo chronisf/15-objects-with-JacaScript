@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 14</title> 
+    <style>
+ button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }  
+        body{
+            color:white;
+            Background-color:orangered;
+        }        
+    </style>            
+    <script>
+  var x=250;
+var y=250;    
+
+function up() {
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.clearRect(0,0,500,500); 
+ ctx.beginPath();
+ctx.arc(x, y,50, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();  
+y-=10;
+return y;    
+        }         
+        
+function down() {
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.clearRect(0,0,500,500); 
+ ctx.beginPath();
+ctx.arc(x, y,50, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();  
+y+=10;
+return y;    
+        }
+
+   function right() {
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.clearRect(0,0,500,500); 
+ ctx.beginPath();
+ctx.arc(x, y,50, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();  
+x+=10;
+return χ;    
+        }     
+        
+ function left() {
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.clearRect(0,0,500,500); 
+ ctx.beginPath();
+ctx.arc(x, y,50, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();  
+x-=10;
+return χ;    
+        }       
+          
+             
+</script>
+</head>
+<body>
+<h3>animation</h3>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid red">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<br>        
+ <button onclick="up()">up</button>
+   
+<button onclick="down()">down</button>
+  
+<button onclick="left()">left</button>
+      
+<button onclick="right()">right</button>
+</body>
+</html>

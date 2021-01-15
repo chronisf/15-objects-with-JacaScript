@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 7</title> 
+    <style>
+ button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }  
+        body{
+            color:white;
+            Background-color:orangered;
+        }        
+    </style>            
+    <script>         
+function colors1() {
+document.getElementById("c1").style.color= "blue";    
+}        
+</script>
+</head>
+<body>
+    
+<button onclick="start1=setTimeout(colors1, 4000)">blue</button>
+<button onclick="clearTimeout(start1)">Stop</button>   
+<h1 id="c1"> έχετε χρόνο 4 sec να αναιρέσετε τη μετατροπή του font color σε μπλε</h1>  
+    
+</body>
+</html>

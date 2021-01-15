@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 13</title> 
+    <style>
+ button {
+            background-color:#0052cc;
+            border: 2px solid #001f4d;
+            color:white;
+        }
+        button:hover {
+            background-color:#001f4d;
+            border: 2px solid white;
+        }  
+        body{
+            color:white;
+            Background-color:dodgerblue;
+        }        
+    </style>            
+    <script>   
+var t=9;        
+function colors1() {
+document.getElementById("c1").style.color= "blue";    
+}   
+function clock1() {
+document.getElementById("clock1").innerHTML= "απομένει χρόνος "+t; 
+if(t>0){
+t-=1;}
+return t;    
+}   
+function text1() {
+document.getElementById("c1").innerHTML= "Η αλλαγή του χρώματος σε μπλε ακυρώθηκε ";   
+}           
+</script>
+</head>
+<body>    
+<button onclick="start1=setTimeout(colors1, 10000);start2=setInterval(clock1, 1000)">blue</button>
+<button onclick="clearTimeout(start1);clearInterval(start2);text1()">Stop</button>   
+<h1 id="c1"> έχετε χρόνο 10 sec να αναιρέσετε τη μετατροπή του font color σε μπλε</h1>  
+<h3>Αντίστροφη μέτρηση</h3>
+<p id="clock1"></p>    
+
+</body>
+</html>

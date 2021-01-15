@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 15</title> 
+    <style>
+ button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }  
+        body{
+            color:white;
+            Background-color:orangered;
+        }        
+    </style>            
+    <script>
+var x=50;
+var y=250; 
+var ver=1;
+var hor=1;        
+        
+function move() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.clearRect(0,0,500,500); 
+ctx.beginPath();
+ctx.arc(x, y,50, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();
+    
+if (y<=50){
+ver=-1;    
+    
+}
+if (y>=450){
+ver=1;    
+    
+}   
+if(ver==1){
+ y-=2;    
+}
+else    {
+y+=2;}
+
+    
+if (x<=50){
+hor=1;    
+    
+}
+if (x>=450){
+hor=-1;    
+    
+}   
+if(hor==1){
+ x+=2;    
+}
+else    {
+x-=2;  }
+return x,y;    
+    
+        }
+</script>
+        
+</head>
+    
+<body>
+<h3>animation</h3>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid red">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<br>        
+
+<button onclick="start1=setInterval(move,50);">set</button>
+<button onclick="clearInterval(start1);">clear</button>     
+    
+</body>
+</html>

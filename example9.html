@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 9</title> 
+    <style>
+ button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }  
+        body{
+            color:white;
+            Background-color:orangered;
+        }        
+    </style>            
+    <script> 
+var colorx=1;        
+function colors1() {
+  if (colorx==1){ 
+document.getElementById("c1").style.color= "blue";
+document.getElementById("c1").style.fontSize= "50px";  
+  }
+  else {
+    document.getElementById("c1").style.color= "yellow";
+   document.getElementById("c1").style.fontSize= "30px";
+  }  
+    colorx=colorx * (-1);
+    return colorx;
+  }      
+</script>
+</head>
+<body onload="start1=setInterval(colors1, 3000)">
+
+<button onclick="clearInterval(start1)">Stop</button>   
+<h1> Εναλλαγή Χρωμάτων  μπλε και κίτρινο</h1> 
+<p id="c1">Εναλλαγή color και fontSize</p>    
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>example 5</title>
+    <style>
+   
+        body{    
+            background-color:darkorange;
+        color:white;
+        }
+        button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }
+        input {
+          background-color:  #ff4d4d;  
+            border: 2px solid orange;
+            color:white;
+        }
+    
+    </style>   
+        
+    <script>    
+var array5 = [1,2,3,4,5,6,7,8,9,10];
+function user() {
+    array5.pop();
+    document.getElementById("show0").innerHTML = array5;
+    document.getElementById("legth").innerHTML ="ο αριθμός των θέσεων του πίνακα είναι:"+array5.length;
+}  
+        
+function reset() {
+    while (array5.length>0) {
+    array5.pop();}
+    document.getElementById("show0").innerHTML = array5;
+    document.getElementById("legth").innerHTML ="ο αριθμός των θέσεων του πίνακα είναι:"+array5.length; 
+}          
+        
+</script>
+    
+</head>
+<body>
+<h1>push array values</h1>
+<h3>οι τιμές του πίνακα είναι</h3>    
+<p id="show0"></p>
+<br>
+<p id="legth"></p>    
+<button onclick="user()">pop</button>
+<button onclick="reset()">reset</button>
+    
+</body>
+</html>

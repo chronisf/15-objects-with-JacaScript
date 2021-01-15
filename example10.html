@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 10</title> 
+    <style>
+ button {
+            background-color:#0052cc;
+            border: 2px solid #001f4d;
+            color:white;
+        }
+        button:hover {
+            background-color:#001f4d;
+            border: 2px solid white;
+        }  
+        body{
+            color:white;
+            Background-color:dodgerblue;
+        }        
+    </style>            
+    <script>    
+        
+function Laptop(model,ram,mSize,capacity) {
+this.model=model;
+this.ram=ram;
+this.mSize=mSize;
+this.capacity=capacity;
+this.ShowLaptop=ShowLaptop;
+}        
+        
+function ShowLaptop() {
+document.write("Model:"+this.model+"<br>");    
+document.write("RAM:"+this.ram+"<br>");
+document.write("MonitorSize"+this.mSize+"<br>");
+document.write("HD Capacity:"+this.capacity+"<hr>");
+}
+</script>
+</head>
+<body>
+   <script>
+Ltop1=new Laptop("Rainbow-340","8 GB","15.5 inches","500 GB SSD");
+Ltop2=new Laptop("Rainbow-850GTXSW","16 GB","17.3 inches","1 TB SSD");
+Ltop1.ShowLaptop();
+Ltop2.ShowLaptop();
+    </script>
+        
+        
+        
+
+</body>
+</html>

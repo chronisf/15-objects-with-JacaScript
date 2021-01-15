@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    <meta charset="UTF-8">
+    <title>example 6</title> 
+    <style>
+        
+ button {
+            background-color:orangered;
+            border: 2px solid orange;
+            color:white;
+        }
+        button:hover {
+            background-color:indianred;
+            border: 2px solid blue;
+        }  
+        
+        body{
+            color:white;
+            Background-color:orangered;
+        }        
+     </style>   
+        
+        
+        <script>
+function colors1() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+ctx.fillStyle="blue";        
+ctx.fill();  
+document.getElementById("c4").style.color = "blue";
+document.getElementById("c4").style.background= "red";	
+}
+        
+function colors2() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(300, 300, 150, 0, 2 * Math.PI);
+ctx.fillStyle="yellow";        
+ctx.fill();  
+document.getElementById("c4").style.color = "green";
+document.getElementById("c4").style.background= "yellow";	
+} 
+        
+function clear1() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+    ctx.beginPath();
+ctx.clearRect(0,0,500,500);
+    
+}          
+        
+</script>
+</head>
+
+    <body>
+<h3>change color with script JS</h3>
+
+<button onclick="colors1()">colors1</button>
+    <button onclick="colors2()">colors2</button>
+<button onclick="clear1()">clear_canvas</button>
+<h4 id="c4">the color of the p element will change</h4>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid red">
+Your browser does not support the HTML5 canvas tag.</canvas>
+  
+        </body>
+</html>
